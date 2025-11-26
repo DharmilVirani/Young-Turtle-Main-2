@@ -14,7 +14,7 @@ const ServiceSection = () => {
       <Header />
       <main className="min-h-screen">
         {/* Hero Section */}
-        <section className="relative overflow-hidden bg-gradient-to-b from-background to-background py-16 sm:py-24">
+        <section className="relative overflow-hidden bg-linear-to-b from-background to-background py-16 sm:py-24">
           <BackgroundElements />
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-12">
@@ -95,7 +95,7 @@ const ServiceSection = () => {
                     },
                   ].map((item, i) => (
                     <div key={i} className="flex gap-4 items-start">
-                      <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-1" />
+                      <CheckCircle className="h-5 w-5 text-accent shrink-0 mt-1" />
                       <div>
                         <p className="font-semibold">{item.title}</p>
                         <p className="text-sm text-muted-foreground">{item.desc}</p>
@@ -188,7 +188,7 @@ const ServiceSection = () => {
                 },
               ].map((item, i) => (
                 <div key={i} className="flex gap-6 items-start">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-accent text-accent-foreground font-bold flex-shrink-0">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-accent text-accent-foreground font-bold shrink-0">
                     {item.step}
                   </div>
                   <div className="flex-1">
@@ -240,7 +240,7 @@ const ServiceSection = () => {
                 "Candlestick Pattern Recognition",
               ].map((indicator, i) => (
                 <Card key={i} className="p-6 border-border bg-background flex items-center gap-3">
-                  <LineChart className="h-5 w-5 text-accent flex-shrink-0" />
+                  <LineChart className="h-5 w-5 text-accent shrink-0" />
                   <p className="font-medium">{indicator}</p>
                 </Card>
               ))}
