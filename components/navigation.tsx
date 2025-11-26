@@ -4,7 +4,7 @@ import { Equal, X } from 'lucide-react'
 import { Button } from '../components/ui/liquid-glass-button'
 import React from 'react'
 import { cn } from '../lib/utils'
-import logo from '../components/logo.png'
+import logo from '../public/logo.png'
 
 const menuItems = [
     { name: 'Products', href: '#link' },
