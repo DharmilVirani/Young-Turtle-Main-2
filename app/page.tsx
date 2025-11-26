@@ -1,10 +1,14 @@
-import { Header } from "@/components/navigation";
-import Image from "next/image";
+import Header from '@/components/navigation'
+import ServiceSection from '@/components/ServiceSection'
+import React from 'react'
 
-export default function Home() {
+const Home = () => {
   return (
     <>
       <Header />
+      <ServiceSection />
     </>
-  );
+  )
 }
+
+export default Home
