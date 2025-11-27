@@ -3,21 +3,29 @@ import { Brain, Database, Zap, CheckCircle, TrendingUp, Shield, LineChart, BarCh
 
 const ServiceSection = () => {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-slate-50 to-white -mt-16">
+    <main className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
       {/* Hero Section */}
       <section className="relative py-20 sm:py-28 overflow-hidden bg-gradient-to-br from-[#275669] via-[#2d6a7f] to-[#1e4552]">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNnptMCAxMmMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNnoiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLW9wYWNpdHk9Ii4wNSIvPjwvZz48L3N2Zz4=')] opacity-20"></div>
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
-              Our Approach to
+              Where Mathematics Meets
               <span className="block pb-10 text-transparent bg-clip-text bg-gradient-to-r from-amber-200 to-amber-400 mt-2">
-                Intelligent Trading
+                Market Intelligence
               </span>
             </h1>
-            <p className="text-xl text-slate-200 leading-relaxed">
-              Combining advanced AI with proven trading principles to deliver consistent, data-driven insights for your financial success.
-            </p>
+            <div className="text-lg sm:text-xl text-slate-200 leading-relaxed space-y-6">
+              <p>
+                Young Turtle is a technology-driven, multi-strategy quantitative trading firm operating in global financial markets. We're a Math and Technology company—scientists and engineers working as a unified team to solve complex problems in the dynamic world of finance.
+              </p>
+              <p>
+                Our team continuously researches and develops quantitative trading algorithms grounded in rigorous mathematical and statistical models. We deploy sophisticated quant models across a broad spectrum of listed Indian and global financial instruments: equities, futures, options, currencies, and commodities.
+              </p>
+              <p>
+                At Young Turtle, we relentlessly pursue market inefficiencies through statistical edge. We're seeking mathematicians, software engineers, and academics to help us uncover hidden connections in financial data.
+              </p>
+            </div>
           </div>
         </div>
       </section>
