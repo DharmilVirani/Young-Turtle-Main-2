@@ -1,77 +1,202 @@
 import React from 'react';
-import { Brain, Database, Zap, CheckCircle, TrendingUp, Shield, LineChart, BarChart3, Target, Sparkles } from "lucide-react";
+import { Brain, Database, Zap, CheckCircle, TrendingUp, Shield, LineChart, BarChart3, Target, Sparkles, Users } from "lucide-react";
+import office from '../public/office.jpeg';
+import Image from 'next/image';
+import poster1 from '../public/image2.png'
+
+
+
+const items = [
+  {
+    title: "Data-Driven Decisions",
+    desc: "Every signal backed by years of market data and rigorous statistical analysis. We don't predict markets—we measure them with mathematical precision.",
+    color: "from-blue-500 to-cyan-500",
+  },
+  {
+    title: "Risk-First Approach",
+    desc: "Capital preservation is our foundation. We prioritize protecting your investments before pursuing profit opportunities through systematic risk management.",
+    color: "from-emerald-500 to-teal-500",
+  },
+  {
+    title: "Complete Transparency",
+    desc: "You understand exactly why we make specific recommendations. Our models are explainable, our reasoning is clear, and our track record is verifiable.",
+    color: "from-amber-500 to-orange-500",
+  },
+];
+
+const items2 = [
+  {
+    icon: Brain,
+    title: "Intelligent Analysis",
+    desc: "Our machine learning models identify market patterns and anomalies that human analysis might miss.",
+    bgColor: "bg-[#cdf1ff]"
+  },
+  {
+    icon: Database,
+    title: "Comprehensive Data",
+    desc: "We aggregate price data, volume information, and macroeconomic indicators for holistic market view.",
+    bgColor: "bg-[#cdf1ff]"
+  },
+  {
+    icon: Zap,
+    title: "Real-Time Execution",
+    desc: "Instant signal generation with millisecond latency ensures you capture market opportunities.",
+    bgColor: "bg-[#cdf1ff]"
+  },
+  {
+    icon: TrendingUp,
+    title: "Continuous Optimization",
+    desc: "Our algorithms learn and evolve with market conditions through constant backtesting.",
+    bgColor: "bg-[#cdf1ff]"
+  },
+];
+
+
+const items3 = [
+  {
+    step: "1",
+    title: "Market Scanning",
+    description: "Our system continuously scans NIFTY 50 and major indices for potential setups matching our technical criteria.",
+    icon: Target,
+    image: "laptop" // Represents analysis/work
+  },
+  {
+    step: "2",
+    title: "Pattern Confirmation",
+    description: "Identified patterns are validated through volume analysis, momentum indicators, and support/resistance levels.",
+    icon: CheckCircle,
+    image: "abstract" // Represents data flow
+  },
+  {
+    step: "3",
+    title: "Risk Analysis",
+    description: "We calculate optimal stop-loss placement and position sizing based on volatility and portfolio correlation.",
+    icon: Shield,
+    image: "chart" // Represents analytics
+  },
+  {
+    step: "4",
+    title: "Signal Generation",
+    description: "High-conviction signals are generated with entry price, target prices, and stop-loss levels with confidence scores.",
+    icon: Zap,
+    image: "growth" // Represents upward movement
+  },
+  {
+    step: "5",
+    title: "Position Management",
+    description: "We provide trail stops, partial profit-taking levels, and dynamic target adjustments based on real-time conditions.",
+    icon: TrendingUp,
+    image: "person" // Represents personalization
+  },
+  {
+    step: "6",
+    title: "Performance Analysis",
+    description: "Detailed post-trade analysis helps you understand what worked, enabling continuous improvement.",
+    icon: BarChart3,
+    image: null
+  },
+];
 
 const ServiceSection = () => {
   return (
     <main className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
       {/* Hero Section */}
-      <section className="relative py-20 sm:py-28 overflow-hidden bg-gradient-to-br from-[#275669] via-[#2d6a7f] to-[#1e4552]">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNnptMCAxMmMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNnoiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLW9wYWNpdHk9Ii4wNSIvPjwvZz48L3N2Zz4=')] opacity-20"></div>
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
+      <section className="relative py-12 sm:py-16 overflow-hidden bg-gradient-to-br from-[#275669] via-[#2d6a7f] to-[#1e4552]">
+        <div className="absolute inset-0 w-full h-full">
+          <Image
+            src={office}
+            alt="Office"
+            layout="fill"
+            objectFit="cover"
+            quality={100}
+            priority
+          />
+        </div>
+
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-[#0b2332]/92"></div>
+
+
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-3xl mx-auto text-center">
+
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
               Where Mathematics Meets
-              <span className="block pb-10 text-transparent bg-clip-text bg-gradient-to-r from-amber-200 to-amber-400 mt-2">
+              <span className="block pb-6 text-transparent bg-clip-text bg-gradient-to-r from-amber-200 to-amber-400 mt-1">
                 Market Intelligence
               </span>
             </h1>
-            <div className="text-lg sm:text-xl text-slate-200 leading-relaxed space-y-6">
-              <p>
-                Young Turtle is a technology-driven, multi-strategy quantitative trading firm operating in global financial markets. We're a Math and Technology company—scientists and engineers working as a unified team to solve complex problems in the dynamic world of finance.
-              </p>
-              <p>
-                Our team continuously researches and develops quantitative trading algorithms grounded in rigorous mathematical and statistical models. We deploy sophisticated quant models across a broad spectrum of listed Indian and global financial instruments: equities, futures, options, currencies, and commodities.
-              </p>
-              <p>
-                At Young Turtle, we relentlessly pursue market inefficiencies through statistical edge. We're seeking mathematicians, software engineers, and academics to help us uncover hidden connections in financial data.
-              </p>
-            </div>
+
+            <p className="text-base sm:text-lg text-slate-200 leading-relaxed">
+              Young Turtle is a technology-driven, multi-strategy quantitative trading firm operating in global financial markets. We're a Math and Technology company—scientists and engineers working as a unified team to solve complex problems in the dynamic world of finance.
+            </p>
+
           </div>
         </div>
       </section>
 
       {/* Core Philosophy */}
-      <section className="py-20 sm:py-24 relative">
+      <section className="py-20 sm:py-32 relative bg-gradient-to-b from-white to-slate-50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#275669] mb-6">Our Core Philosophy</h2>
-            <p className="text-lg text-slate-600 leading-relaxed">
-              Successful trading is built on three pillars: rigorous analysis, disciplined risk management, and psychological resilience. Our platform combines AI-driven insights with time-tested trading principles.
-            </p>
-          </div>
+          {/* Single Card Container */}
+          <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-slate-100 to-slate-200 shadow-2xl">
+            {/* Background Image */}
+            <div className="absolute inset-0">
+              <Image
+                src="/office.jpeg" // Replace with your image
+                alt="Our Team"
+                fill
+                className="object-cover"
+                quality={100}
+              />
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-slate-900/85 to-slate-900/60"></div>
+            </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Data-Driven",
-                icon: Database,
-                desc: "Every signal backed by years of market data and statistical analysis",
-                color: "from-blue-500 to-cyan-500"
-              },
-              {
-                title: "Risk-First",
-                icon: Shield,
-                desc: "We prioritize capital preservation before pursuing profit opportunities",
-                color: "from-emerald-500 to-teal-500"
-              },
-              {
-                title: "Transparent",
-                icon: BarChart3,
-                desc: "You understand exactly why we make specific recommendations",
-                color: "from-amber-500 to-orange-500"
-              },
-            ].map((item, i) => (
-              <div
-                key={i}
-                className="group relative p-8 rounded-2xl bg-white border-2 border-slate-200 hover:border-[#275669] transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
-              >
-                <div className={`h-14 w-14 rounded-xl bg-gradient-to-br ${item.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                  <item.icon className="h-7 w-7 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h3>
-                <p className="text-slate-600 leading-relaxed">{item.desc}</p>
+            {/* Content */}
+            <div className="relative z-10 p-8 sm:p-12 lg:p-16">
+              {/* Badge */}
+              <div className="inline-flex items-center justify-center px-5 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-8">
+                <span className="text-sm font-semibold text-white uppercase tracking-wider">
+                  Our Philosophy
+                </span>
               </div>
-            ))}
+
+              {/* Title */}
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 max-w-2xl">
+                By Experts. For You.
+              </h2>
+
+              {/* Description */}
+              <p className="text-base sm:text-lg text-slate-200 leading-relaxed mb-12 max-w-3xl">
+                Young Turtle was founded by mathematicians and engineers who have experienced the core challenges of quantitative trading—limited technology, fragmented research, and a lack of precision. With deep expertise in mathematics and finance, we're building algorithms that are rigorous, transparent, and powerful. Through strong mathematical models, clear analytics, and advanced infrastructure, we provide a trusted foundation for systematic trading to thrive.
+              </p>
+
+              {/* Three Pillars Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+                {items.map((item, i) => (
+                  <div
+                    key={i}
+                    className="group p-6 lg:p-8 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-all duration-300"
+                  >
+                    <div className="flex items-center gap-3 mb-4">
+                      <span className={`h-1.5 w-12 rounded-full bg-gradient-to-r ${item.color}`}></span>
+                      <span className="text-xs font-semibold text-slate-300 uppercase tracking-wider">
+                        Pillar {i + 1}
+                      </span>
+                    </div>
+
+                    <h3 className="text-xl lg:text-2xl font-bold text-white mb-3">
+                      {item.title}
+                    </h3>
+
+                    <p className="text-sm lg:text-base text-slate-300 leading-relaxed">
+                      {item.desc}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -79,142 +204,131 @@ const ServiceSection = () => {
       {/* Methodology Section */}
       <section className="py-20 sm:py-24 bg-gradient-to-b from-slate-50 to-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-8">
-              <div>
-                <h2 className="text-3xl sm:text-4xl font-bold text-[#275669] mb-4">Our Methodology</h2>
-                <p className="text-lg text-slate-600 leading-relaxed">
-                  We employ a comprehensive approach that integrates multiple analytical frameworks to identify high-probability trading opportunities with favorable risk-reward ratios.
+          {/* Header */}
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#275669] mb-6">
+              Our Methodology
+            </h2>
+            <p className="text-lg sm:text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto">
+              We employ a comprehensive approach that integrates multiple analytical frameworks to identify high-probability trading opportunities.
+            </p>
+          </div>
+
+          {/* Card Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {items2.map((item, i) => (
+              <div
+                key={i}
+                className={`group p-8 rounded-2xl ${item.bgColor} border-2 border-transparent`}
+              >
+                {/* Icon */}
+                <div className={`h-14 w-14 rounded-xl bg-gradient-to-br flex items-center justify-center mb-6 group-hover:scale-110 `}>
+                  <item.icon className="h-7 w-7 text-[#275669]" strokeWidth={2} />
+                </div>
+
+                {/* Content */}
+                <h3 className="text-xl font-bold text-slate-900 mb-3 leading-tight">
+                  {item.title}
+                </h3>
+                <p className="text-slate-600 leading-relaxed text-sm">
+                  {item.desc}
                 </p>
               </div>
-
-              <div className="space-y-4">
-                {[
-                  { title: "Technical Pattern Recognition", desc: "AI-powered candlestick pattern detection" },
-                  { title: "Volume & Momentum Analysis", desc: "Confirmation through volume and trend strength" },
-                  { title: "Market Structure Evaluation", desc: "Support, resistance, and trend identification" },
-                  { title: "Risk-Reward Assessment", desc: "Optimal entry and exit point calculation" },
-                  { title: "Portfolio Correlation Study", desc: "Diversification and hedge effectiveness analysis" },
-                  { title: "Real-Time Condition Monitoring", desc: "Continuous signal adjustment based on market changes" },
-                ].map((item, i) => (
-                  <div key={i} className="flex gap-4 items-start group">
-                    <div className="h-6 w-6 rounded-full bg-gradient-to-br from-[#275669] to-[#1e4552] flex items-center justify-center shrink-0 mt-0.5 group-hover:scale-110 transition-transform">
-                      <CheckCircle className="h-4 w-4 text-white" />
-                    </div>
-                    <div>
-                      <p className="font-semibold text-slate-900">{item.title}</p>
-                      <p className="text-sm text-slate-600">{item.desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="space-y-5">
-              {[
-                {
-                  icon: Brain,
-                  title: "Intelligent Analysis",
-                  desc: "Our machine learning models identify market patterns and anomalies that human analysis might miss. Trained on millions of candlesticks across market cycles.",
-                  gradient: "from-purple-500 to-pink-500"
-                },
-                {
-                  icon: Database,
-                  title: "Comprehensive Data Integration",
-                  desc: "We aggregate price data, volume information, open interest, and macroeconomic indicators to provide a holistic market view. Real-time data from NSE/BSE.",
-                  gradient: "from-blue-500 to-cyan-500"
-                },
-                {
-                  icon: Zap,
-                  title: "Real-Time Execution",
-                  desc: "Instant signal generation with millisecond latency ensures you capture market opportunities. Alerts delivered via multiple channels simultaneously.",
-                  gradient: "from-amber-500 to-orange-500"
-                },
-                {
-                  icon: TrendingUp,
-                  title: "Continuous Optimization",
-                  desc: "Our algorithms learn and evolve with market conditions. We continuously backtest and optimize our models to maintain high accuracy.",
-                  gradient: "from-emerald-500 to-teal-500"
-                },
-              ].map((item, i) => (
-                <div
-                  key={i}
-                  className="group p-6 rounded-xl bg-white border border-slate-200 hover:border-[#275669] transition-all duration-300 hover:shadow-lg"
-                >
-                  <div className="flex items-start gap-4">
-                    <div className={`h-12 w-12 rounded-lg bg-gradient-to-br ${item.gradient} flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform`}>
-                      <item.icon className="h-6 w-6 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="font-bold text-slate-900 mb-2">{item.title}</h3>
-                      <p className="text-sm text-slate-600 leading-relaxed">{item.desc}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Trading Framework */}
-      <section className="py-20 sm:py-24 bg-gradient-to-br from-[#275669] to-[#1e4552] relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNnptMCAxMmMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNnoiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLW9wYWNpdHk9Ii4wNSIvPjwvZz48L3N2Zz4=')] opacity-10"></div>
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white text-center mb-16">Our 6-Step Trading Framework</h2>
+      <section className="py-20 sm:py-32 bg-[#cdf1ff] relative overflow-hidden">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10 ">
+          {/* Header with badge */}
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-white shadow-sm mb-6">
+              <span className="text-sm font-semibold text-[#275669] uppercase tracking-wider">
+                Who We Are
+              </span>
+            </div>
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#1a3d4a] mb-4">
+              Young Turtle
+            </h2>
+          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                step: "1",
-                title: "Market Scanning",
-                description: "Our system continuously scans NIFTY 50 and major indices for potential setups matching our technical criteria and probability models.",
-                icon: Target
-              },
-              {
-                step: "2",
-                title: "Pattern Confirmation",
-                description: "Identified patterns are validated through volume analysis, momentum indicators, and support/resistance levels before signal generation.",
-                icon: CheckCircle
-              },
-              {
-                step: "3",
-                title: "Risk Analysis",
-                description: "We calculate optimal stop-loss placement and position sizing based on volatility, portfolio correlation, and your risk tolerance.",
-                icon: Shield
-              },
-              {
-                step: "4",
-                title: "Signal Generation",
-                description: "High-conviction signals are generated with entry price, target prices, and stop-loss levels. Each signal includes a confidence score.",
-                icon: Zap
-              },
-              {
-                step: "5",
-                title: "Position Management",
-                description: "We provide trail stops, partial profit-taking levels, and dynamic target adjustments based on real-time market conditions.",
-                icon: TrendingUp
-              },
-              {
-                step: "6",
-                title: "Performance Analysis",
-                description: "Detailed post-trade analysis helps you understand what worked and what didn't, enabling continuous improvement in your trading.",
-                icon: BarChart3
-              },
-            ].map((item, i) => (
-              <div key={i} className="group">
-                <div className="h-full p-8 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300">
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="h-12 w-12 rounded-xl bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center font-bold text-white text-xl group-hover:scale-110 transition-transform">
-                      {item.step}
-                    </div>
-                    <item.icon className="h-8 w-8 text-amber-300" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
-                  <p className="text-slate-200 leading-relaxed">{item.description}</p>
-                </div>
+          {/* Top 5 Grid - Visual Cards */}
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-4">
+            {/* Card 1 - Image: Laptop/Analysis */}
+            <div className="col-span-1 aspect-square rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+              <img
+                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80"
+                alt="Data Analysis"
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            {/* Card 2 - Image: Abstract/Flow (Wide) */}
+            <div className="col-span-1 aspect-square rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+              <img
+                src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&auto=format&fit=crop&q=80"
+                alt="Market Flow"
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            {/* Card 3 - Icon: Chart Bars */}
+            <div className="col-span-1 aspect-square rounded-3xl bg-white shadow-lg flex items-center justify-center hover:shadow-xl transition-all duration-300 hover:scale-105">
+              <div className="flex flex-col items-center gap-2">
+                <div className="h-3 w-16 bg-[#275669] rounded-full"></div>
+                <div className="h-3 w-20 bg-[#275669] rounded-full"></div>
+                <div className="h-3 w-12 bg-[#275669] rounded-full"></div>
               </div>
-            ))}
+            </div>
+
+            {/* Card 4 - Icon: Growth Chart */}
+            <div className="col-span-1 aspect-square rounded-3xl bg-white shadow-lg flex items-center justify-center hover:shadow-xl transition-all duration-300 hover:scale-105">
+              <TrendingUp className="h-16 w-16 text-emerald-600" strokeWidth={2} />
+            </div>
+
+            {/* Card 5 - Image: Team/Person */}
+            <div className="col-span-2 md:col-span-1 aspect-square rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+              <img
+                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&auto=format&fit=crop&q=80"
+                alt="Team Collaboration"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+
+          {/* Bottom 3 Grid - Content Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Card 1 */}
+            <div className="p-8 rounded-3xl bg-white shadow-lg hover:shadow-xl transition-all duration-300">
+              <h3 className="text-2xl font-bold text-[#1a3d4a] mb-4">
+                Quantitative Excellence
+              </h3>
+              <p className="text-slate-600 leading-relaxed">
+                A technology-driven, multi-strategy quantitative trading firm. We're scientists and engineers united by mathematics, solving complex problems in the dynamic world of finance.
+              </p>
+            </div>
+
+            {/* Card 2 */}
+            <div className="p-8 rounded-3xl bg-white shadow-lg hover:shadow-xl transition-all duration-300">
+              <h3 className="text-2xl font-bold text-[#1a3d4a] mb-4">
+                Statistical Edge
+              </h3>
+              <p className="text-slate-600 leading-relaxed">
+                Our algorithms trade across equities, futures, options, currencies, and commodities—seeking market inefficiencies through rigorous mathematical and statistical models.
+              </p>
+            </div>
+
+            {/* Card 3 */}
+            <div className="p-8 rounded-3xl bg-white shadow-lg hover:shadow-xl transition-all duration-300">
+              <h3 className="text-2xl font-bold text-[#1a3d4a] mb-4">
+                Data-Driven Discovery
+              </h3>
+              <p className="text-slate-600 leading-relaxed">
+                We seek mathematicians, software engineers, and academics to help us uncover hidden connections in financial data and push the boundaries of quantitative research.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -242,49 +356,6 @@ const ServiceSection = () => {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Technical Indicators */}
-      <section className="py-20 sm:py-24 bg-gradient-to-b from-slate-50 to-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#275669] text-center mb-16">Technical Indicators We Use</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              "Moving Averages (SMA, EMA)",
-              "RSI (Relative Strength Index)",
-              "MACD (Moving Average Convergence Divergence)",
-              "Bollinger Bands",
-              "Stochastic Oscillator",
-              "Volume Profile Analysis",
-              "Fibonacci Retracements",
-              "ATR (Average True Range)",
-              "Candlestick Pattern Recognition",
-            ].map((indicator, i) => (
-              <div
-                key={i}
-                className="group p-6 rounded-xl bg-white border border-slate-200 hover:border-[#275669] transition-all duration-300 hover:shadow-lg flex items-center gap-4"
-              >
-                <div className="h-10 w-10 rounded-lg bg-gradient-to-br from-[#275669] to-[#1e4552] flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
-                  <LineChart className="h-5 w-5 text-white" />
-                </div>
-                <p className="font-semibold text-slate-900">{indicator}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-[#275669] to-[#1e4552]">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">Ready to Transform Your Trading?</h2>
-          <p className="text-xl text-slate-200 mb-8">
-            Join thousands of traders who trust Young Turtle for intelligent market insights.
-          </p>
-          <button className="px-8 py-4 bg-gradient-to-r from-amber-400 to-orange-500 text-white font-semibold rounded-xl hover:shadow-2xl hover:scale-105 transition-all duration-300">
-            Get Started Today
-          </button>
         </div>
       </section>
     </main>

@@ -18,10 +18,10 @@ const HeroSection = () => {
             </video>
 
             {/* Overlay */}
-            <div className="absolute inset-0 bg-black/40"></div>
+            <div className="absolute inset-0 bg-[#275669]/20 lg:bg-[#275669]/20"></div>
 
             {/* Content */}
-            <div className="relative z-10 text-center text-white px-4 sm:px-6 md:px-8 lg:px-12 w-[210%]">
+            <div className="relative z-10 text-center text-white px-4 sm:px-4 md:px-4 lg:px-12 w-[110%]">
                 <BlurTextAnimation className="bg-transparent" />
                 {/* Buttons */}
                 {/* <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
