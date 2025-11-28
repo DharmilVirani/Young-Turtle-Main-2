@@ -2,7 +2,11 @@ import React from 'react';
 import { Brain, Database, Zap, CheckCircle, TrendingUp, Shield, LineChart, BarChart3, Target, Sparkles, Users } from "lucide-react";
 import office from '../public/office.jpeg';
 import Image from 'next/image';
-import poster1 from '../public/image2.png'
+import poster1 from '../public/person.jpeg'
+import poster2 from '../public/uptrend.jpeg'
+import poster3 from '../public/teamwork.jpeg'
+import team from '../public/hired.jpeg'
+
 
 
 
@@ -29,25 +33,25 @@ const items2 = [
     icon: Brain,
     title: "Intelligent Analysis",
     desc: "Our machine learning models identify market patterns and anomalies that human analysis might miss.",
-    bgColor: "bg-[#cdf1ff]"
+    bgColor: "bg-[#275669]"
   },
   {
     icon: Database,
     title: "Comprehensive Data",
     desc: "We aggregate price data, volume information, and macroeconomic indicators for holistic market view.",
-    bgColor: "bg-[#cdf1ff]"
+    bgColor: "bg-[#275669]"
   },
   {
     icon: Zap,
     title: "Real-Time Execution",
     desc: "Instant signal generation with millisecond latency ensures you capture market opportunities.",
-    bgColor: "bg-[#cdf1ff]"
+    bgColor: "bg-[#275669]"
   },
   {
     icon: TrendingUp,
     title: "Continuous Optimization",
     desc: "Our algorithms learn and evolve with market conditions through constant backtesting.",
-    bgColor: "bg-[#cdf1ff]"
+    bgColor: "bg-[#275669]"
   },
 ];
 
@@ -142,15 +146,9 @@ const ServiceSection = () => {
           <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-slate-100 to-slate-200 shadow-2xl">
             {/* Background Image */}
             <div className="absolute inset-0">
-              <Image
-                src="/office.jpeg" // Replace with your image
-                alt="Our Team"
-                fill
-                className="object-cover"
-                quality={100}
-              />
+
               {/* Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-slate-900/85 to-slate-900/60"></div>
+              <div className="absolute inset-0 bg-[#275669]"></div>
             </div>
 
             {/* Content */}
@@ -202,13 +200,14 @@ const ServiceSection = () => {
       </section>
 
       {/* Methodology Section */}
-      <section className="py-20 sm:py-24 bg-gradient-to-b from-slate-50 to-white">
+      <section className="py-20 sm:py-24 bg-gradient-to-b from-slate-50 to-white -mt-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#275669] mb-6">
               Our Methodology
             </h2>
+            <div className='w-85 h-1 bg-[#275669] mx-auto mb-4 -mt-1 rounded-full'></div>
             <p className="text-lg sm:text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto">
               We employ a comprehensive approach that integrates multiple analytical frameworks to identify high-probability trading opportunities.
             </p>
@@ -223,14 +222,14 @@ const ServiceSection = () => {
               >
                 {/* Icon */}
                 <div className={`h-14 w-14 rounded-xl bg-gradient-to-br flex items-center justify-center mb-6 group-hover:scale-110 `}>
-                  <item.icon className="h-7 w-7 text-[#275669]" strokeWidth={2} />
+                  <item.icon className="h-7 w-7 text-white" strokeWidth={2} />
                 </div>
 
                 {/* Content */}
-                <h3 className="text-xl font-bold text-slate-900 mb-3 leading-tight">
+                <h3 className="text-xl font-bold text-white mb-3 leading-tight">
                   {item.title}
                 </h3>
-                <p className="text-slate-600 leading-relaxed text-sm">
+                <p className="text-white leading-relaxed text-sm">
                   {item.desc}
                 </p>
               </div>
@@ -239,17 +238,49 @@ const ServiceSection = () => {
         </div>
       </section>
 
-      {/* Trading Framework */}
-      <section className="py-20 sm:py-32 bg-[#cdf1ff] relative overflow-hidden">
+      <section className="px-4 py-20 bg-white">
+        <div className="relative rounded-3xl overflow-hidden max-w-6xl mx-auto">
+
+          {/* Image */}
+          <img
+            src={team.src}
+            alt="Community"
+            className="w-full h-[350px] sm:h-[420px] object-cover"
+          />
+
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-[#275669]/40"></div>
+
+          {/* Center Content */}
+          <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
+            <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-4">
+              Join the Team
+            </h2>
+
+            <p className="text-lg sm:text-xl text-white/90 mb-6">
+              Take the first step
+            </p>
+
+            <button className="px-6 py-3 bg-white text-black font-semibold rounded-full hover:bg-slate-200 transition">
+              Explore Careers
+            </button>
+          </div>
+        </div>
+      </section>
+
+
+
+      {/* Who We Are */}
+      <section className="py-20 sm:py-32 bg-[#275669] relative overflow-hidden">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10 ">
           {/* Header with badge */}
-          <div className="text-center mb-12">
+          <div className="text-center mb-12 -mt-10">
             <div className="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-white shadow-sm mb-6">
               <span className="text-sm font-semibold text-[#275669] uppercase tracking-wider">
                 Who We Are
               </span>
             </div>
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#1a3d4a] mb-4">
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4">
               Young Turtle
             </h2>
           </div>
@@ -259,7 +290,7 @@ const ServiceSection = () => {
             {/* Card 1 - Image: Laptop/Analysis */}
             <div className="col-span-1 aspect-square rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
               <img
-                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80"
+                src={poster1.src}
                 alt="Data Analysis"
                 className="w-full h-full object-cover"
               />
@@ -268,7 +299,7 @@ const ServiceSection = () => {
             {/* Card 2 - Image: Abstract/Flow (Wide) */}
             <div className="col-span-1 aspect-square rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
               <img
-                src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&auto=format&fit=crop&q=80"
+                src={poster2.src}
                 alt="Market Flow"
                 className="w-full h-full object-cover"
               />
@@ -285,13 +316,13 @@ const ServiceSection = () => {
 
             {/* Card 4 - Icon: Growth Chart */}
             <div className="col-span-1 aspect-square rounded-3xl bg-white shadow-lg flex items-center justify-center hover:shadow-xl transition-all duration-300 hover:scale-105">
-              <TrendingUp className="h-16 w-16 text-emerald-600" strokeWidth={2} />
+              <TrendingUp className="h-16 w-16 text-[#275669]" strokeWidth={2} />
             </div>
 
             {/* Card 5 - Image: Team/Person */}
             <div className="col-span-2 md:col-span-1 aspect-square rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
               <img
-                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&auto=format&fit=crop&q=80"
+                src={poster3.src}
                 alt="Team Collaboration"
                 className="w-full h-full object-cover"
               />
@@ -302,7 +333,7 @@ const ServiceSection = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Card 1 */}
             <div className="p-8 rounded-3xl bg-white shadow-lg hover:shadow-xl transition-all duration-300">
-              <h3 className="text-2xl font-bold text-[#1a3d4a] mb-4">
+              <h3 className="text-2xl font-bold text-[#275669] mb-4">
                 Quantitative Excellence
               </h3>
               <p className="text-slate-600 leading-relaxed">
@@ -312,7 +343,7 @@ const ServiceSection = () => {
 
             {/* Card 2 */}
             <div className="p-8 rounded-3xl bg-white shadow-lg hover:shadow-xl transition-all duration-300">
-              <h3 className="text-2xl font-bold text-[#1a3d4a] mb-4">
+              <h3 className="text-2xl font-bold text-[#275669] mb-4">
                 Statistical Edge
               </h3>
               <p className="text-slate-600 leading-relaxed">
@@ -322,7 +353,7 @@ const ServiceSection = () => {
 
             {/* Card 3 */}
             <div className="p-8 rounded-3xl bg-white shadow-lg hover:shadow-xl transition-all duration-300">
-              <h3 className="text-2xl font-bold text-[#1a3d4a] mb-4">
+              <h3 className="text-2xl font-bold text-[#275669] mb-4">
                 Data-Driven Discovery
               </h3>
               <p className="text-slate-600 leading-relaxed">

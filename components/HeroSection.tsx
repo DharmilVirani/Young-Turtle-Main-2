@@ -13,7 +13,7 @@ const HeroSection = () => {
                 preload="metadata"
                 className="absolute inset-0 w-full h-full object-cover"
             >
-                <source src="/turtle2.mp4" type="video/mp4" />
+                <source src="/turtle2_crop.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
 

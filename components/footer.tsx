@@ -1,153 +1,211 @@
 "use client"
 
-import { Mail, MapPin, Linkedin, Twitter, Facebook, Youtube, Instagram } from "lucide-react"
+import { Mail, MapPin, Linkedin, Twitter, Facebook, Instagram, Phone, FileText } from "lucide-react"
 
 export function Footer() {
     const year = new Date().getFullYear()
 
     return (
-        <footer className="relative bg-[#0f1b2d] text-slate-200 pt-20 pb-10">
-            <div className="max-w-7xl mx-auto px-6">
+        <footer className="relative bg-gradient-to-br from-[#275669] via-[#1e4552] to-[#1a3d4a] text-white">
+            {/* Decorative top border */}
+            <div className="h-1 bg-white"></div>
 
-                {/* TOP ROW — LOGO LEFT & SOCIAL ICONS RIGHT */}
-                <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6 mb-14 mt-6">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-                    {/* Replaced Text with Your Logo */}
-                    <div>
-                        <img
-                            src="/logo.png"
-                            alt="Young Turtle Logo"
-                            className="h-14 md:h-16 object-contain"
-                        />
-                    </div>
+                {/* TOP SECTION - Logo & Social */}
+                <div className="pt-16 pb-12 border-b border-white/10">
+                    <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8">
 
-                    {/* Social Icons */}
-                    <div className="flex items-center gap-4 text-slate-300">
-                        <FooterIcon><Instagram size={17} /></FooterIcon>
-                        <FooterIcon><Linkedin size={17} /></FooterIcon>
-                        <FooterIcon><Twitter size={17} /></FooterIcon>
-                        <FooterIcon><Facebook size={17} /></FooterIcon>
-                        <FooterIcon><Youtube size={17} /></FooterIcon>
+                        {/* Logo & Tagline */}
+                        <div className="space-y-3">
+                            <img
+                                src="/logo.png"
+                                alt="Young Turtle Logo"
+                                className="h-12 sm:h-14 object-contain"
+                            />
+                            <p className="text-sm text-slate-300 max-w-xs">
+                                Where mathematics meets market intelligence
+                            </p>
+                        </div>
+
+                        {/* Social Icons */}
+                        <div className="flex items-center gap-3">
+                            <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider mr-2 hidden sm:block">
+                                Follow Us
+                            </span>
+                            <FooterIcon href="#"><Instagram size={18} /></FooterIcon>
+                            <FooterIcon href="#"><Linkedin size={18} /></FooterIcon>
+                            <FooterIcon href="#"><Twitter size={18} /></FooterIcon>
+                            <FooterIcon href="#"><Facebook size={18} /></FooterIcon>
+                        </div>
                     </div>
                 </div>
 
                 {/* MAIN GRID */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                <div className="py-16 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-12">
 
                     {/* CONTACT */}
-                    <div className="space-y-6">
+                    <div className="space-y-8">
                         <div>
-                            <h4 className="text-sm font-semibold tracking-[0.26em] text-slate-400 uppercase">
+                            <h4 className="text-base font-bold text-white mb-5 flex items-center gap-2">
+                                <div className="h-1 w-8 bg-white rounded-full"></div>
                                 Get in Touch
                             </h4>
-                            <div className="mt-4 flex items-center gap-3 text-slate-200">
-                                <Mail size={16} className="shrink-0" />
-                                <a href="mailto:info@youngturtle.in" className="hover:text-white">
-                                    info@youngturtle.in
+                            <div className="space-y-4">
+                                <a href="mailto:info@youngturtle.in" className="flex items-center gap-3 text-white hover:text-white transition-colors group">
+                                    <div className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center group-hover:bg-white/10 transition-colors">
+                                        <Mail size={18} />
+                                    </div>
+                                    <span className="text-sm">info@youngturtle.in</span>
+                                </a>
+
+                                <a href="tel:+910000000000" className="flex items-center gap-3 text-white hover:text-white transition-colors group">
+                                    <div className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center group-hover:bg-white/10 transition-colors">
+                                        <Phone size={18} />
+                                    </div>
+                                    <span className="text-sm">+91-0000000000</span>
                                 </a>
                             </div>
                         </div>
 
                         <div>
-                            <h4 className="text-sm font-semibold tracking-[0.26em] text-slate-400 uppercase">
-                                Address
-                            </h4>
-                            <div className="mt-4 flex items-start gap-3 text-slate-300">
-                                <MapPin size={16} className="shrink-0 mt-1" />
-                                <p className="text-sm leading-relaxed">
-                                    Young Turtle, Some Street Name,<br />
-                                    Bengaluru, Karnataka, India – 560001
-                                </p>
+                            <div className="flex items-start gap-3 text-white">
+                                <div className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center shrink-0 mt-1">
+                                    <MapPin size={18} />
+                                </div>
+                                <div className="text-sm leading-relaxed">
+                                    <p className="font-medium text-white mb-1">Registered Office</p>
+                                    <p>Some Street Name,<br />Bengaluru, Karnataka<br />India – 560001</p>
+                                </div>
                             </div>
                         </div>
                     </div>
 
                     {/* COMPLIANCE DOCS */}
                     <div>
-                        <h4 className="text-sm font-semibold tracking-[0.26em] text-slate-400 uppercase mb-4">
-                            Compliance Documents
+                        <h4 className="text-base font-bold text-white mb-5 flex items-center gap-2">
+                            <div className="h-1 w-8 bg-white rounded-full"></div>
+                            Compliance
                         </h4>
-                        <div className="space-y-2 text-sm text-slate-300">
+                        <ul className="space-y-3 text-sm text-slate-300">
                             {[
                                 "Disclosure Documents",
-                                "Statement of Investor Complaints",
+                                "Investor Complaints",
                                 "Investor Charter",
-                                "PMS Performance Reports",
+                                "Performance Reports",
+                                "Risk Disclosures",
                             ].map((item) => (
-                                <a key={item} href="#" className="block hover:text-white">{item}</a>
+                                <li key={item}>
+                                    <a href="#" className="hover:text-white hover:translate-x-1 inline-flex items-center gap-2 transition-all group">
+                                        <FileText size={14} className="text-white opacity-60 group-hover:opacity-100" />
+                                        {item}
+                                    </a>
+                                </li>
                             ))}
-                        </div>
+                        </ul>
                     </div>
 
                     {/* POLICY DOCS */}
                     <div>
-                        <h4 className="text-sm font-semibold tracking-[0.26em] text-slate-400 uppercase mb-4">
-                            Policy Documents
+                        <h4 className="text-base font-bold text-white mb-5 flex items-center gap-2">
+                            <div className="h-1 w-8 bg-white rounded-full"></div>
+                            Policies
                         </h4>
-                        <div className="space-y-2 text-sm text-slate-300">
+                        <ul className="space-y-3 text-sm text-slate-300">
                             {[
                                 "Code of Conduct",
-                                "Grievance Redressal Policy",
+                                "Grievance Redressal",
                                 "KYC & AML Policy",
                                 "Privacy Policy",
-                                "PMS Fee Structure",
+                                "Fee Structure",
                             ].map((item) => (
-                                <a key={item} href="#" className="block hover:text-white">{item}</a>
+                                <li key={item}>
+                                    <a href="#" className="hover:text-white hover:translate-x-1 inline-flex items-center gap-2 transition-all group">
+                                        <FileText size={14} className="text-white opacity-60 group-hover:opacity-100" />
+                                        {item}
+                                    </a>
+                                </li>
                             ))}
-                        </div>
+                        </ul>
+                    </div>
+
+                    {/* QUICK LINKS */}
+                    <div>
+                        <h4 className="text-base font-bold text-white mb-5 flex items-center gap-2">
+                            <div className="h-1 w-8 bg-white rounded-full"></div>
+                            Quick Links
+                        </h4>
+                        <ul className="space-y-3 text-sm text-slate-300">
+                            {[
+                                { name: "About Us", href: "#" },
+                                { name: "Our Team", href: "#" },
+                                { name: "Methodology", href: "#" },
+                                { name: "Careers", href: "#" },
+                                { name: "Contact", href: "#" },
+                            ].map((item) => (
+                                <li key={item.name}>
+                                    <a href={item.href} className="hover:text-white hover:translate-x-1 inline-block transition-all">
+                                        {item.name}
+                                    </a>
+                                </li>
+                            ))}
+                        </ul>
                     </div>
                 </div>
 
-                {/* DIVIDER */}
-                <div className="h-px w-full bg-slate-700 mb-10"></div>
-
                 {/* REGULATORY SECTION */}
-                <div className="space-y-6 text-xs text-slate-400 leading-relaxed mb-12">
-                    <p>
-                        <span className="font-semibold text-slate-300">Young Turtle Investment Advisors LLP (PMS)</span> –
-                        SEBI Registered Portfolio Manager. Registration and other regulatory details will be updated here.
-                    </p>
+                <div className="py-12 border-t border-white/10">
+                    <div className="bg-white/5 rounded-2xl p-6 sm:p-8 backdrop-blur-sm space-y-6 text-xs sm:text-sm text-slate-300 leading-relaxed">
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <p>
-                            <span className="font-semibold text-slate-300">Principal Officer:</span> [Name Here]<br />
-                            Email: <a href="mailto:compliance@youngturtle.in" className="hover:text-white">compliance@youngturtle.in</a><br />
-                            Phone: +91-0000000000
-                        </p>
+                        <div>
+                            <p className="font-semibold text-white mb-2">Young Turtle Investment Advisors LLP (PMS)</p>
+                            <p>SEBI Registered Portfolio Manager. Registration and other regulatory details will be updated here. Young Turtle is committed to transparency and investor protection.</p>
+                        </div>
 
-                        <p>
-                            <span className="font-semibold text-slate-300">SEBI Local Office:</span> <br />
-                            [Office Name], [Road Name],<br />
-                            [Area], Bengaluru 5600xx<br />
-                            Telephone: +91-080-00000000
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
+                            <div className="space-y-1">
+                                <p className="font-semibold text-white">Principal Officer</p>
+                                <p>[Name Here]</p>
+                                <p>Email: <a href="mailto:compliance@youngturtle.in" className="text-slate-300 hover:text-white">compliance@youngturtle.in</a></p>
+                                <p>Phone: +91-0000000000</p>
+                            </div>
+
+                            <div className="space-y-1">
+                                <p className="font-semibold text-white">SEBI Local Office</p>
+                                <p>[Office Name], [Road Name]</p>
+                                <p>[Area], Bengaluru 5600xx</p>
+                                <p>Tel: +91-080-00000000</p>
+                            </div>
+                        </div>
+
+                        <p className="pt-4 border-t border-white/10 text-xs">
+                            <strong>Disclaimer:</strong> Read all scheme related documents carefully before investing. Past performance is not indicative of future returns. Please consider your specific investment requirements before choosing a scheme.
                         </p>
                     </div>
-
-                    <p>
-                        Young Turtle is committed to transparency and investor protection. Read all scheme related documents before investing.
-                    </p>
                 </div>
 
                 {/* BOTTOM ROW */}
-                <div className="border-t border-slate-800 pt-4 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500">
-                    <p>© {year} Young Turtle. All rights reserved.</p>
+                <div className="py-8 border-t border-white/10">
+                    <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+                        <p>© {year} Young Turtle. All rights reserved.</p>
 
-                    <nav className="flex flex-wrap gap-4">
-                        <a href="#" className="hover:text-white">Terms of Use</a>
-                        <a href="#" className="hover:text-white">Privacy Policy</a>
-                        <a href="#" className="hover:text-white">Disclaimers</a>
-                    </nav>
+                        <nav className="flex flex-wrap justify-center gap-6">
+                            <a href="#" className="hover:text-white transition-colors">Terms of Use</a>
+                            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
+                            <a href="#" className="hover:text-white transition-colors">Disclaimers</a>
+                        </nav>
+                    </div>
                 </div>
             </div>
         </footer>
     )
 }
 
-function FooterIcon({ children }: { children: React.ReactNode }) {
+function FooterIcon({ children, href }: { children: React.ReactNode, href: string }) {
     return (
         <a
-            href="#"
-            className="w-9 h-9 rounded-full border border-slate-600 flex items-center justify-center text-slate-300 hover:bg-white hover:text-black transition-all"
+            href={href}
+            className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center text-slate-300 hover:bg-white hover:text-[#275669] transition-all duration-300 hover:scale-110"
         >
             {children}
         </a>
